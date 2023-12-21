@@ -9,20 +9,51 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   margin-top: 200px;
 }
 
-.padlock {
-  transition: opacity 0.5s ease-in-out;
-  color: #62dda0;
-  font-size: 40px;
-}
-
-.padlock-open {
-  font-size: 40px;
-  transition: opacity 0.5s ease-in-out;
-  color: gray;
-}
-
 .container-padlock-small {
   margin-top: 20px;
   margin-left: 20px;
 }
 
+.mat-icon {
+  font-size: 24px;
+  animation: showClosedLock 0.5s ease-in-out;
+  color: #62dda0;
+  cursor: pointer;
+}
+
+.padlock-open {
+  animation: showOpenLock 0.5s ease-in-out;
+  color: gray;
+}
+
+@keyframes showClosedLock {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes showOpenLock {
+  from {
+    opacity: 0;
+    transform: scale(0.5) rotate(180deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(180deg);
+  }
+}
+
+.padlock-1 {
+  &:not(.padlock-open) {
+    cursor: pointer;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
