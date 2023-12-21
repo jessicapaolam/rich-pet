@@ -1,1 +1,12 @@
-<p>port3 works!</p>
+<div>
+  <input
+    type="text"
+    [value]="enterPassword"
+    readonly
+    [ngClass]="{ 'correct-password': stateService.correctPassword() }"
+  />
+  <div>
+    <button (click)="setPassword('1')">1</button>
+    <button (click)="setPassword('0')">0</button>
+  </div>
+</div>

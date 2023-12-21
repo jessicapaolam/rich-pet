@@ -52,7 +52,7 @@ export class StateService {
     this.refreshActualPage('port1');
   }
 
-  private correctPassword(): boolean {
+  correctPassword(): boolean {
     return this.enterPassword === '28091998';
   }
 
