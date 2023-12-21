@@ -1,12 +1,34 @@
-<div>
-  <input
-    type="text"
-    [value]="enterPassword"
-    readonly
-    [ngClass]="{ 'correct-password': stateService.correctPassword() }"
-  />
-  <div>
-    <button (click)="setPassword('1')">1</button>
-    <button (click)="setPassword('0')">0</button>
+<div class="container-port3">
+  <div class="padlock-container">
+    <mat-icon class="padlock padlock1" *ngIf="!padlockOpen">lock</mat-icon>
+    <mat-icon class="padlock-open padlock1" *ngIf="padlockOpen">lock_open</mat-icon>
   </div>
+
+  <div class="container-input">
+    <mat-form-field>
+        <input
+        matInput
+        [value]="enterPassword"
+        readonly
+      />
+    </mat-form-field>
+  </div>
+
+  <div class="button-container">
+    <button mat-stroked-button color="primary" (click)="setPassword('0')">0</button>
+    <button mat-stroked-button color="primary" (click)="setPassword('1')">1</button>
+    <button mat-stroked-button color="primary" (click)="setPassword('2')">2</button>
+    <button mat-stroked-button color="primary" (click)="setPassword('3')">3</button>
+    <button mat-stroked-button color="primary" (click)="setPassword('4')">4</button>
+    <button mat-stroked-button color="primary" (click)="setPassword('5')">5</button>
+    <button mat-stroked-button color="primary" (click)="setPassword('6')">6</button>
+    <button mat-stroked-button color="primary" (click)="setPassword('7')">7</button>
+    <button mat-stroked-button color="primary" (click)="setPassword('8')">8</button>
+    <button mat-stroked-button color="primary" (click)="setPassword('9')">9</button>
+  </div>
+</div>
+
+<div class="button-confirm-container">
+  <button mat-raised-button color="primary" (click)="confirmPassword()">Validar Senha</button>
+  <button mat-raised-button color="accent" (click)="clearPassword()">Limar</button>
 </div>

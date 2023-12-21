@@ -31,14 +31,10 @@ export class StateService {
     if (this.enterPassword.length < 8) {
       this.enterPassword += password;
     }
-
-    if (this.enterPassword.length === 8) {
-      this.openPadlock3();
-    }
   }
 
   openPadlock3() {
-    if (this.padlockOpen1 && !this.padlockOpen3 && this.correctPassword()) {
+    if (this.padlockOpen1 && !this.padlockOpen3) {
       this.padlockOpen3 = true;
       this.refreshActualPage('cats');
     }
@@ -52,8 +48,8 @@ export class StateService {
     this.refreshActualPage('port1');
   }
 
-  correctPassword(): boolean {
-    return this.enterPassword === '28091998';
+  correctPassword(): any {
+    return this.enterPassword === '12345678';
   }
 
   private refreshActualPage(page: string) {

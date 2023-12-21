@@ -1,1 +1,34 @@
-.correct-password {}
+.padlock-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.container-input {
+  display: flex;
+  justify-content: center;
+}
+
+.button-confirm-container {
+  display: flex;
+  justify-content: center;
+}
+
+.padlock-1 {
+  font-size: 80px !important;
+}
+
+mat-icon {
+  height: 200px;
+  width: 80px;
+  font-size: 80px;
+}
+
+button {
+  margin-right: 20px;
+}
