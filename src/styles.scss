@@ -2,3 +2,27 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+.padlock {
+  transition: opacity 0.5s ease-in-out;
+  color: #62dda0;
+  font-size: 40px;
+}
+
+.padlock-open {
+  font-size: 40px;
+  transition: opacity 0.5s ease-in-out;
+  color: gray;
+}
+
+.container-padlock-small {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+

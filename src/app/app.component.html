@@ -1,3 +1,10 @@
+<mat-toolbar color="primary">
+  <span>Rich Pets</span>
+</mat-toolbar>
+
+<!-- button reset -->
+<button mat-raised-button color="accent" (click)="reset()">Resetar</button>
+
 <div>
   <div *ngIf="!shouldShowModal()">
     <div *ngIf="currentPage === 'port1'">
@@ -13,8 +20,6 @@
       <app-cats></app-cats>
     </div>
 
-    <!-- button reset -->
-    <button (click)="reset()">Resetar</button>
   </div>
 
   <!-- custom modal -->

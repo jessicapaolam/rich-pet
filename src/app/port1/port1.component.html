@@ -1,5 +1,18 @@
-<div>
-  <button (click)="openPadlock1()" [ngClass]="{ 'padlock-open-1': padlockOpen1 }">
-    Abrir Cadeado 1
-  </button>
+<div class="container">
+  <mat-icon class="padlock padlock-1" *ngIf="!padlockOpen1" (click)="openPadlock1()">lock</mat-icon>
+  <mat-icon class="padlock-open" *ngIf="padlockOpen1">lock_open</mat-icon>
+
+  <div class="container-padlock-small">
+
+    <mat-icon class="padlock padlock-size" *ngIf="!padlockOpen2" (click)="padlockOpen2 = !padlockOpen2">lock</mat-icon>
+    <mat-icon class="padlock-open" *ngIf="padlockOpen2">lock_open</mat-icon>
+
+    <mat-icon class="padlock padlock-size" *ngIf="!padlockOpen3" (click)="padlockOpen3 = !padlockOpen3">lock</mat-icon>
+    <mat-icon class="padlock-open" *ngIf="padlockOpen3">lock_open</mat-icon>
+
+    <mat-icon class="padlock padlock-size" *ngIf="!padlockOpen4" (click)="padlockOpen4 = !padlockOpen4">lock</mat-icon>
+    <mat-icon class="padlock-open" *ngIf="padlockOpen4">lock_open</mat-icon>
+
+  </div>
 </div>
+
