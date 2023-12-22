@@ -49,7 +49,7 @@ export class StateService {
   }
 
   correctPassword(): any {
-    return this.enterPassword === '12345678';
+    return this.enterPassword === '28091998';
   }
 
   private refreshActualPage(page: string) {

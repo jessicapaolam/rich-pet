@@ -24,7 +24,7 @@ export class Port3Component {
   }
 
   confirmPassword() {
-    if (this.enterPassword == '12345678') {
+    if (this.enterPassword == '28091998') {
       this.padlockOpen = true;
         const dialogRef = this.dialog.open(ModalComponent, {
           data: {isClose: true},
